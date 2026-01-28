@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
@@ -13,7 +14,9 @@ const Contact = () => {
           interesting problems. Feel free to reach out.
         </p>
         
-        <div className="flex items-center gap-6">
+        <ContactForm />
+        
+        <div className="flex items-center gap-6 mt-8 pt-8 border-t border-border">
           <a
             href="https://github.com/AEJaspan"
             target="_blank"

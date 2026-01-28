@@ -1,22 +1,6 @@
+import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
-
-const articles = [
-  {
-    title: "LLM Classifier Confidence Scores",
-    date: "Sep 2025",
-    url: "https://aejaspan.github.io/posts/2025-09-01-LLM-Clasifier-Confidence-Scores",
-  },
-  {
-    title: "Negotiation Strategies",
-    date: "May 2025",
-    url: "https://aejaspan.github.io/posts/2025-05-26-Negotiation-strategies",
-  },
-  {
-    title: "GenAI Connect: Building with LangChain",
-    date: "Jul 2024",
-    url: "https://aejaspan.github.io/posts/2024-07-19-GenAi%20connect%20-%20building%20with%20LangChain",
-  },
-];
+import { articles } from "@/data/articles";
 
 const Writing = () => {
   return (
@@ -27,15 +11,22 @@ const Writing = () => {
         </h2>
         
         <div className="space-y-1">
-          {articles.map((article, index) => (
-            <a
-              key={index}
-              href={article.url}
-              target="_blank"
-              rel="noopener noreferrer"
+          {articles.slice(0, 3).map((article) => (
+            <Link
+              key={article.id}
+              to={`/article/${article.id}`}
               className="group flex items-center justify-between py-4 border-b border-border/50 hover:border-border transition-colors duration-300"
             >
               <div className="flex items-center gap-4">
+                {article.thumbnail && (
+                  <div className="shrink-0 w-12 h-12 rounded overflow-hidden bg-secondary hidden sm:block">
+                    <img
+                      src={article.thumbnail}
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
                 <span className="text-foreground group-hover:text-accent transition-colors duration-300">
                   {article.title}
                 </span>
@@ -46,19 +37,17 @@ const Writing = () => {
                 </span>
                 <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
               </div>
-            </a>
+            </Link>
           ))}
         </div>
         
-        <a
-          href="https://aejaspan.github.io/tabs/archive.html"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/articles"
           className="inline-flex items-center gap-2 mt-6 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
         >
           View all articles
           <ArrowUpRight className="w-3 h-3" />
-        </a>
+        </Link>
       </div>
     </section>
   );
