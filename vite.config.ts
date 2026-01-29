@@ -5,6 +5,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // For GitHub Pages: set base to '/clean-slate/' for project pages
+  // Remove or set to '/' if using a custom domain or user pages (username.github.io)
+  base: process.env.GITHUB_ACTIONS ? "/clean-slate/" : "/",
   server: {
     host: "::",
     port: 8080,

@@ -8,7 +8,57 @@ export interface Article {
   tags: string[];
 }
 
-// Add new articles here - just add a new object to this array
+/*
+ * ============================================================================
+ * HOW TO ADD A NEW BLOG POST
+ * ============================================================================
+ *
+ * 1. Copy the template below and paste it at the TOP of the articles array
+ * 2. Fill in your content using the format shown
+ * 3. Commit and push - GitHub Actions will auto-deploy!
+ *
+ * TEMPLATE (copy everything between the dashes):
+ * ----------------------------------------------------------------------------
+  {
+    id: "your-url-slug",           // URL-friendly (lowercase, hyphens)
+    title: "Your Article Title",
+    date: "Jan 2026",              // Format: "Mon YYYY"
+    excerpt: "A brief description that appears in article listings.",
+    content: `
+# Your Article Title
+
+Your introduction paragraph here.
+
+## Section Heading
+
+Your content with **bold** and *italic* text.
+
+### Subsection
+
+- Bullet point 1
+- Bullet point 2
+
+1. Numbered list
+2. Second item
+
+## Conclusion
+
+Wrap up your thoughts here.
+    `,
+    thumbnail: "https://images.unsplash.com/photo-XXXXX?w=800&h=400&fit=crop",
+    tags: ["Tag1", "Tag2", "Tag3"]
+  },
+ * ----------------------------------------------------------------------------
+ *
+ * TIPS:
+ * - Find free images at unsplash.com, copy the photo URL and add ?w=800&h=400&fit=crop
+ * - Use # for main title, ## for sections, ### for subsections
+ * - Articles are sorted by their position in the array (first = newest)
+ *
+ * ============================================================================
+ */
+
+// Add new articles at the TOP of this array (newest first)
 export const articles: Article[] = [
   {
     id: "llm-classifier-confidence-scores",
