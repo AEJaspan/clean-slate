@@ -1,73 +1,80 @@
-# Welcome to your Lovable project
+# Dr A. E. Jaspan - Personal Website
 
-## Project info
+A personal portfolio and blog site built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Live Site
 
-## How can I edit this code?
+**🌐 https://aejaspan.github.io/clean-slate/**
 
-There are several ways of editing your application.
+The site automatically deploys to GitHub Pages when you push to the `main` branch.
 
-**Use Lovable**
+## Adding a New Blog Post
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+1. Open `src/data/articles.ts`
+2. Add a new article object at the **top** of the `articles` array:
 
-Changes made via Lovable will be committed automatically to this repo.
+```typescript
+{
+  id: "your-url-slug",           // URL-friendly (lowercase, hyphens)
+  title: "Your Article Title",
+  date: "Jan 2026",              // Format: "Mon YYYY"
+  excerpt: "A brief description that appears in article listings.",
+  content: `
+# Your Article Title
 
-**Use your preferred IDE**
+Your introduction paragraph here.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Section Heading
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Your content with **bold** and *italic* text.
 
-Follow these steps:
+- Bullet point 1
+- Bullet point 2
+
+## Conclusion
+
+Wrap up your thoughts here.
+  `,
+  thumbnail: "https://images.unsplash.com/photo-XXXXX?w=800&h=400&fit=crop",
+  tags: ["Tag1", "Tag2", "Tag3"]
+},
+```
+
+3. Commit and push - the site will auto-deploy in ~2 minutes
+
+**Tips:**
+- Find free images at [Unsplash](https://unsplash.com), copy the photo URL and add `?w=800&h=400&fit=crop`
+- Use `#` for main title, `##` for sections, `###` for subsections
+- Articles appear in array order (first = newest)
+
+## Local Development
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Install dependencies
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start dev server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The site runs at http://localhost:8080
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Tech Stack
 
-**Use GitHub Codespaces**
+- **Framework:** React 18 + TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui
+- **Deployment:** GitHub Pages via GitHub Actions
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```
+src/
+├── components/     # React components
+├── pages/          # Page components (Index, Articles, Article)
+├── data/
+│   └── articles.ts # Blog posts data (edit this to add posts!)
+├── hooks/          # Custom React hooks
+└── lib/            # Utilities
+```
