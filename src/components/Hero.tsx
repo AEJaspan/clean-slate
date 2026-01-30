@@ -1,11 +1,10 @@
-// To add your profile image: save it as public/profile.jpg in the repo
 const Hero = () => {
   return (
     <section className="pt-32 pb-16 px-6">
       <div className="max-w-2xl mx-auto">
         <div className="flex items-start gap-6 mb-6">
           <img
-            src={import.meta.env.BASE_URL + "profile.jpg"}
+            src={import.meta.env.BASE_URL + "C848C707-CDD3-4879-94DF-9E87142D8E48.jpeg"}
             alt="Dr A. E. Jaspan"
             className="w-24 h-24 rounded-full object-cover animate-stagger animate-stagger-1"
           />
