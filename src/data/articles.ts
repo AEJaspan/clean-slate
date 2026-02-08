@@ -1,11 +1,11 @@
 export interface Article {
-  id: string;
-  title: string;
-  date: string;
-  excerpt: string;
-  content: string;
-  thumbnail?: string;
-  tags: string[];
+    id: string;
+    title: string;
+    date: string;
+    excerpt: string;
+    content: string;
+    thumbnail?: string;
+    tags: string[];
 }
 
 /*
@@ -60,12 +60,13 @@ Wrap up your thoughts here.
 
 // Add new articles at the TOP of this array (newest first)
 export const articles: Article[] = [
-  {
-    id: "llm-classifier-confidence-scores",
-    title: "Evaluating Confidence Calibration in LLM-as-Judge Classification Systems",
-    date: "Sep 2025",
-    excerpt: "An empirical investigation into confidence consistency and calibration across multiple LLMs, confidence representation formats, and classification tasks.",
-    content: `
+    {
+        id: "llm-classifier-confidence-scores",
+        title: "Evaluating Confidence Calibration in LLM-as-Judge Classification Systems",
+        date: "Sep 2025",
+        excerpt:
+            "An empirical investigation into confidence consistency and calibration across multiple LLMs, confidence representation formats, and classification tasks.",
+        content: `
 # Evaluating Confidence Calibration in LLM-as-Judge Classification Systems
 
 Large Language Models (LLMs) are increasingly deployed as classifiers in what's commonly referred to as "LLM-as-judge" frameworks. While these models aren't explicitly optimized for classification tasks, they have demonstrated remarkable reliability across diverse domains. However, unlike traditional probabilistic classifiers that output calibrated probability distributions, off-the-shelf LLMs typically provide only discrete predictions without accompanying confidence measures.
@@ -110,15 +111,17 @@ The key finding is that confidence representation format significantly impacts b
 
 These findings indicate that prompted confidence scores from LLMs, regardless of representation format, remain unsuitable for high-stakes applications requiring reliable uncertainty quantification.
     `,
-    thumbnail: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop",
-    tags: ["LLM", "Machine Learning", "Classification", "AI"]
-  },
-  {
-    id: "negotiation-strategies",
-    title: "Collaborative Agents: How AI Models Negotiate in a Multi-Turn Prisoner's Dilemma",
-    date: "May 2025",
-    excerpt: "Studying how effectively AI models can negotiate across OpenAI, Anthropic & Gemini models, measuring how provider and size affects collaboration.",
-    content: `
+        thumbnail:
+            "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop",
+        tags: ["LLM", "Machine Learning", "Classification", "AI"],
+    },
+    {
+        id: "negotiation-strategies",
+        title: "Collaborative Agents: How AI Models Negotiate in a Multi-Turn Prisoner's Dilemma",
+        date: "May 2025",
+        excerpt:
+            "Studying how effectively AI models can negotiate across OpenAI, Anthropic & Gemini models, measuring how provider and size affects collaboration.",
+        content: `
 # Collaborative Agents: How AI Models Negotiate in a Multi-Turn Prisoner's Dilemma
 
 I looked at six pairings of agents—across OpenAI, Anthropic & Gemini models—and measured how model provider and size affects collaboration, and I explored giving models the option to make, and break contracts between each other, to see how this affects cooperative behavior.
@@ -196,30 +199,36 @@ Cooperation significantly improves with provider alignment, mixed-size pairings,
 
 **Code:** https://github.com/AEJaspan/negotiation_blog
     `,
-    thumbnail: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&h=400&fit=crop",
-    tags: ["AI", "Multi-Agent Systems", "Game Theory", "Research"]
-  },
-  {
-    id: "genai-connect-langchain",
-    title: "GenAI Connect: Building with LangChain",
-    date: "Jul 2024",
-    excerpt: "Delivering a technical introduction to building generative AI applications using LangChain at PwC UK's GenAI Connect event.",
-    content: `
+        thumbnail:
+            "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&h=400&fit=crop",
+        tags: ["AI", "Multi-Agent Systems", "Game Theory", "Research"],
+    },
+    {
+        id: "genai-connect-langchain",
+        title: "GenAI Connect: Building with LangChain",
+        date: "Jul 2024",
+        excerpt:
+            "Delivering a technical introduction to building generative AI applications using LangChain at PwC UK's GenAI Connect event.",
+        content: `
 # Building with LangChain
 
 Last week, PwC UK hosted the GenAI Connect day. This event brought together over 1,400 technologists from across the firm, with a focus on learning around Generative AI.
 
+![GenAI Connect](/posts/gen-ai-connect.webp)
+
 It was great to have the opportunity to deliver a session at this event, in which I gave a technical introduction to building generative AI applications using LangChain. It was a good opportunity to get into the pros and cons of LangChain, and to show technologists at PwC what is possible with this incredible new technology.
     `,
-    thumbnail: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=400&fit=crop",
-    tags: ["LangChain", "GenAI", "Python", "PwC"]
-  },
-  {
-    id: "llm-as-a-judge",
-    title: "LLM as a Judge to Validate the Accuracy of Generated Content",
-    date: "Jun 2024",
-    excerpt: "Implementing a novel technique using LLMs as judges to validate the accuracy of generated content through Retrieval-Augmented Generation (RAG).",
-    content: `
+        thumbnail:
+            "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=400&fit=crop",
+        tags: ["LangChain", "GenAI", "Python", "PwC"],
+    },
+    {
+        id: "llm-as-a-judge",
+        title: "LLM as a Judge to Validate the Accuracy of Generated Content",
+        date: "Jun 2024",
+        excerpt:
+            "Implementing a novel technique using LLMs as judges to validate the accuracy of generated content through Retrieval-Augmented Generation (RAG).",
+        content: `
 # LLM as a Judge to Validate the Accuracy of Generated Content
 
 Large Language Models (LLMs) like GPT-4 have found many use cases. A particular strength of these models is the abstractive summarization of long, complicated text. This application presents the user with a problem though - how can you be sure that the summary is correct? The simple solution is to read the entire document being summarised - but naturally, that defeats the purpose of generating this summary.
@@ -238,17 +247,21 @@ This approach not only improves the quality of the content but also instills con
 
 Employing LLMs as judges using RAG for content validation holds significant potential. It can streamline the review process, enhance content reliability, and combat misinformation. As AI technology advances, the role of LLMs in ensuring content accuracy through RAG will likely become even more critical.
 
+I have attached a demonstration of the tool that I built, presented by one of my colleagues, Timothy Chapman. This shows the LLM-as-a-judge tool being presented in a front end application that I also put together via Streamlit.
+
 For more details, see the blog post: https://www.linkedin.com/pulse/testing-genai-three-brief-case-studies-demonstrating-so-chapman-u3bne/
     `,
-    thumbnail: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=800&h=400&fit=crop",
-    tags: ["LLM", "RAG", "AI", "Content Validation"]
-  },
-  {
-    id: "french-language-learning-app",
-    title: "Building a ChatGPT Applet for French Language Learning",
-    date: "Nov 2023",
-    excerpt: "Developing an interactive ChatGPT-based applet for French language learning with configurable scenarios and anti-drift safeguards.",
-    content: `
+        thumbnail:
+            "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=800&h=400&fit=crop",
+        tags: ["LLM", "RAG", "AI", "Content Validation"],
+    },
+    {
+        id: "french-language-learning-app",
+        title: "Building a ChatGPT Applet for French Language Learning",
+        date: "Nov 2023",
+        excerpt:
+            "Developing an interactive ChatGPT-based applet for French language learning with configurable scenarios and anti-drift safeguards.",
+        content: `
 # Building a ChatGPT Applet for French Language Learning
 
 ## Introduction
@@ -277,7 +290,15 @@ Quality assurance is paramount. Hence, I implemented a range of unit tests to en
 
 ## Walk Through
 
-On beginning a session, the model is initiated with a prompt directing the conversation in the direction of the selected topic. The conversation then flows from there, with the model correcting language mistakes, and guiding the user in how to respond in fluent French.
+On beginning a session, the model is initiated with a prompt directing the conversation in the direction of the selected topic.
+
+![Welcome screen](/posts/GPTScreengrabs/welcome_screen.png)
+
+![Initialised model](/posts/GPTScreengrabs/intitalised_model.png)
+
+The conversation then flows from there, with the model correcting language mistakes, and guiding the user in how to respond in fluent French.
+
+![Having a conversation](/posts/GPTScreengrabs/having_a_conversation.png)
 
 ## Conclusion
 
@@ -287,35 +308,41 @@ This project was intended as a demonstration of the many ways in which ChatGPT a
 
 Looking ahead, I plan to incorporate more advanced features, such as adaptive learning paths and real-time progress tracking. The goal is to continually enhance the applet, making it an indispensable tool for anyone looking to master the French language.
     `,
-    thumbnail: "https://images.unsplash.com/photo-1549737328-8b9f3252b927?w=800&h=400&fit=crop",
-    tags: ["ChatGPT", "Language Learning", "Python", "Flask"]
-  },
-  {
-    id: "trail-racing",
-    title: "Trail Race Triumph!",
-    date: "Nov 2023",
-    excerpt: "Celebrating a 2nd place finish in my category at a recent trail race.",
-    content: `
+        thumbnail:
+            "https://images.unsplash.com/photo-1549737328-8b9f3252b927?w=800&h=400&fit=crop",
+        tags: ["ChatGPT", "Language Learning", "Python", "Flask"],
+    },
+    {
+        id: "trail-racing",
+        title: "Trail Race Triumph!",
+        date: "Nov 2023",
+        excerpt:
+            "Celebrating a 2nd place finish in my category at a recent trail race.",
+        content: `
 # Trail Race Triumph!
 
 Exciting news from the trails - I just came 2nd in my category in a recent trail race! I regularly compete in both road and trail marathons, and have a passion for mountaineering. Every step in a marathon or a mountain climb pushes me further in my journey.
+
+![Trail Race Victory](/posts/chelly_chase.jpg)
 
 Thanks for all the support!
 
 *Stay tuned for more adventures!*
     `,
-    thumbnail: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&h=400&fit=crop",
-    tags: ["Running", "Trail Racing", "Personal"]
-  },
-  {
-    id: "election-forecasting",
-    title: "Bayesian Analysis for Election Forecasting",
-    date: "Nov 2023",
-    excerpt: "Deploying a Hierarchical Bayesian model to forecast election results in a fictional country resembling the UK's first-past-the-post system.",
-    content: `
+        thumbnail:
+            "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&h=400&fit=crop",
+        tags: ["Running", "Trail Racing", "Personal"],
+    },
+    {
+        id: "election-forecasting",
+        title: "Bayesian Analysis for Election Forecasting",
+        date: "Nov 2023",
+        excerpt:
+            "Deploying a Hierarchical Bayesian model to forecast election results in a fictional country resembling the UK's first-past-the-post system.",
+        content: `
 # Bayesian Analysis for Election Forecasting: A Case Study from Dataland
 
-My recent work involves deploying a Hierarchical Bayesian model to forecast election results in a fictional country, Dataland, which resembles the UK's first-past-the-post electoral system. Here is a high level overview of the methodological framework I developed.
+My recent work involves deploying a Hierarchical Bayesian model to forecast election results in a fictional country, Dataland, which resembles the UK's first-past-the-post electoral system. Here is a high level overview of the methodological framework I developed, a deep dive on the details is provided in the [README](https://github.com/AEJaspan/ElectionForecasting) of the repo.
 
 ## Introduction
 
@@ -323,19 +350,31 @@ Dataland, a fictional representation with 12 provinces and a multi-party system,
 
 ## Methodological Workflow
 
-The Bayesian workflow was meticulously structured, starting with the calculation of state-specific partisan leans from historical vote share data. This was followed by integrating raw polling data and forecasting trends using a General Additive Model (GAM) applied to the polling predictions. Additionally, lagged economic indicators or "fundamentals" were processed to factor in the economic conditions influencing voter behavior.
+The Bayesian workflow was meticulously structured, starting with the calculation of state-specific partisan leans from historical vote share data. This was followed by integrating raw polling data and forecasting trends using a General Additive Model (GAM) applied to the polling predictions. The derived trend lines from this analysis can be seen below. Additionally, lagged economic indicators or "fundamentals" were processed to factor in the economic conditions influencing voter behavior.
+
+![National predictions with win probabilities](/posts/Dataland/National_predictions_with_win_probs.png)
 
 ## Model Execution
 
-The model combines lagged economic indicators, polling data, and historical partisan leans to predict vote shares. The model was carefully tuned to the peculiarities of Dataland's political landscape, including inflation rates and GDP changes, to estimate the national vote share on election day.
+The DatalandElectionModel.py script is the crux of the forecasting model, combining lagged economic indicators, polling data, and historical partisan leans to predict vote shares. The model was carefully tuned to the peculiarities of Dataland's political landscape, including inflation rates and GDP changes, to estimate the national vote share on election day.
+
+![Time series](/posts/Dataland/time_series.png)
+
+![Histograms](/posts/Dataland/histograms.png)
 
 ## Data Processing and Model Refinement
 
-Data processing involved calculating the exponentially weighted sum of past partisan leans to create a current lean matrix. Additionally, the effect of pair-wise correlations across similarly inclined voting blocks was considered. Polling trends were calculated using a weighted 7-day moving average, with pollster-specific weightings to mitigate bias.
+Data processing involved calculating the exponentially weighted sum of past partisan leans to create a current lean matrix. Additionally, the effect of pair-wise correlations across similarly inclined voting blocks was considered, as seen below. Polling trends were calculated using a weighted 7-day moving average, with pollster-specific weightings to mitigate bias. Time series forecasting was developed in a custom-built analysis package, and the model's predictive performance was gauged against economic indicators using Bayesian methods.
+
+![Correlation matrix](/posts/Dataland/correlation_matrix.png)
 
 ## Results and Visualization
 
-The Bayesian analysis culminated in state-specific win probabilities and national-level projections, which were then parsed through a simulated Electoral College system to determine the overall election winner. The model's accuracy was demonstrated through various visualizations comparing predicted and actual results, underscoring the tool's robustness.
+The Bayesian analysis culminated in state-specific win probabilities and national-level projections, which were then parsed through a simulated Electoral College system to determine the overall election winner. The averaged results of this process for the 2023 election are shown below.
+
+![Simulation results map](/posts/Dataland/simulation_results_map.png)
+
+The model's accuracy was demonstrated through various visualizations comparing predicted and actual results, underscoring the tool's robustness.
 
 ## Concluding Remarks
 
@@ -343,15 +382,17 @@ This project served as an interesting deep dive into both political science, as 
 
 **Repository:** https://github.com/AEJaspan/ElectionForecasting
     `,
-    thumbnail: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=800&h=400&fit=crop",
-    tags: ["Bayesian", "Python", "PyMC", "Forecasting"]
-  },
-  {
-    id: "poll-scraper",
-    title: "Building a Robust Data Scraper",
-    date: "Oct 2023",
-    excerpt: "Demonstrating production-quality code with a political polling data scraper featuring comprehensive testing and CI/CD pipelines.",
-    content: `
+        thumbnail:
+            "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=800&h=400&fit=crop",
+        tags: ["Bayesian", "Python", "PyMC", "Forecasting"],
+    },
+    {
+        id: "poll-scraper",
+        title: "Building a Robust Data Scraper",
+        date: "Oct 2023",
+        excerpt:
+            "Demonstrating production-quality code with a political polling data scraper featuring comprehensive testing and CI/CD pipelines.",
+        content: `
 # Building a Robust Data Scraper
 
 In the data-driven world of political analysis, having access to the latest polling data is crucial. My latest project was born out of a desire to tinker with web scraping while embracing industry-standard tooling. This wasn't just an isolated exercise but a precursor to a series of ambitious projects I have envisioned in the political polling arena.
@@ -362,73 +403,97 @@ A primary goal of this project is to demonstrate what production-quality code sh
 
 ## Testing
 
-To ensure that the tool continues working under any future scenarios, I developed an extensive testing suite. This suite covered everything from unit tests that validated individual components to integration tests that ensured the scraper and the endpoint communicated correctly. Testing is often undervalued, but it is the cornerstone of reliable code.
+To ensure that the tool continues working under any future scenarios, I developed an extensive testing suite. This suite covered everything from unit tests that validated individual components to integration tests that ensured the scraper and the endpoint communicated correctly. Testing is often undervalued, but it is the cornerstone of reliable code. The tests were automated, running on various datasets to simulate real-world conditions.
 
 ## Continuous Integration and Deployment
 
-The modern software lifecycle is incomplete without Continuous Integration (CI) and Continuous Deployment (CD). For this project, I utilized GitHub pipelines to automate the workflow. Each commit triggered a series of actions, from running tests to deploying the code to the production environment.
+The modern software lifecycle is incomplete without Continuous Integration (CI) and Continuous Deployment (CD). For this project, I utilized GitHub pipelines to automate the workflow. Each commit triggered a series of actions, from running tests to deploying the code to the production environment. This CI/CD pipeline ensured that any updates or fixes were swiftly and safely implemented, minimizing downtime and maintaining the tool's integrity.
 
 ## Documentation
 
-Comprehensive documentation is the hallmark of any serious software tool. With this in mind, I meticulously documented the entire process on ReadTheDocs, ensuring that anyone from a future collaborator to an enthusiastic learner could understand and utilize the tool effectively.
+Comprehensive documentation is the hallmark of any serious software tool. With this in mind, I meticulously documented the entire process on ReadTheDocs, ensuring that anyone from a future collaborator to an enthusiastic learner could understand and utilize the tool effectively. This documentation covers everything from setup to troubleshooting, providing a clear roadmap for the tool's usage.
 
-## Resources
+## A Peek into the Repository
 
-- **Source Code:** https://github.com/AEJaspan/PollScraper
-- **Testing Suite:** https://github.com/AEJaspan/PollScraper/tree/master/tests
-- **Full Documentation:** https://pollscraper.readthedocs.io/en/latest/index.html
+The GitHub repository serves as the central hub for the tool. It's where you can find the source code, the testing suite, and the pipeline configurations. Each piece of the code is commented and organized for ease of navigation. Feel free to dive into the repository and explore the inner workings of the scraper:
+
+- **Source Code:** [GitHub Repo](https://github.com/AEJaspan/PollScraper)
+- **Testing Suite:** [GitHub Repo - Tests](https://github.com/AEJaspan/PollScraper/tree/master/tests)
+- **Pipeline Configurations:** [GitHub Repo - CI/CD Pipeline](https://github.com/AEJaspan/PollScraper/actions)
+
+## ReadTheDocs
+
+For a more structured and detailed guide, the ReadTheDocs documentation is your go-to resource. It offers step-by-step instructions, best practices, and troubleshooting tips:
+
+- **Full Documentation:** [ReadTheDocs Documentation](https://pollscraper.readthedocs.io/en/latest/index.html)
 
 ## Conclusion
 
-Sometimes the best way to develop a skill set, and to demonstrate the utility of current industry standard tooling is to play around with a toy problem in a sandbox environment, and to see what you can learn from this.
+Sometimes the best way to develop a skill set, and to demonstrate the utility of current industry standard tooling is to play around with a toy problem in a sandbox environment, and to see what you can learn from this. I've had a lot of fun in doing so, and I hope you have enjoyed reading about this process!
+
+Whether you're a fellow data scientist, a political analyst, or simply a curious mind, I invite you to explore the repository, peruse the documentation, and perhaps, suggest improvements to the project.
     `,
-    thumbnail: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=400&fit=crop",
-    tags: ["Python", "Web Scraping", "CI/CD", "Testing"]
-  },
-  {
-    id: "bayesian-structural-health-monitoring",
-    title: "Applied Bayesian Structural Health Monitoring",
-    date: "Aug 2023",
-    excerpt: "A white paper on applying Bayesian Inference for time series forecasting in geotechnical site monitoring, presented at GAMM 2023.",
-    content: `
+        thumbnail:
+            "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=400&fit=crop",
+        tags: ["Python", "Web Scraping", "CI/CD", "Testing"],
+    },
+    {
+        id: "bayesian-structural-health-monitoring",
+        title: "Applied Bayesian Structural Health Monitoring",
+        date: "Aug 2023",
+        excerpt:
+            "A white paper on applying Bayesian Inference for time series forecasting in geotechnical site monitoring, presented at GAMM 2023.",
+        content: `
 # Applied Bayesian Structural Health Monitoring: Inclinometer Data Anomaly Detection and Forecasting
 
-My latest white paper, delivered at the GAMM 2023 conference, documents the methodologies I developed on behalf of DYWIDAG into the application of Bayesian Inference for time series forecasting. This paper marks significant progress in geotechnical site monitoring.
+### Introduction to Advanced Structural Health Monitoring
 
-## Challenges in Inclinometer Data Analysis
+My latest white paper, delivered at the GAMM 2023 conference, documents the methodologies I developed on behalf of DYWIDAG into the application of Bayesian Inference for time series forecasting. This paper marks significant progress in geotechnical site monitoring. This research stands out in its novel use of Bayesian methods for analyzing inclinometer data, which are crucial in monitoring the stability of earthworks and infrastructure.
+
+### Challenges in Inclinometer Data Analysis
 
 Inclinometers play a pivotal role in assessing earthwork slopes and infrastructure stability. However, interpreting their data is challenging, as they are subject to complex physical phenomena and systematic errors. My research aims to tackle two main topics: providing an early warning system via time series forecasting, and developing a site-specific risk evaluation.
 
-## Understanding the Data
+### Understanding the Data
 
-In this analysis, my first instinct was to improve on the traditional style of visualizing the inclinometer data. Typically, static, two-dimensional plots were used. However, using Plotly, I developed interactive plots which provided a more intuitive understanding of the data, and uncovered flaws in traditional analysis methods, where 2-dimensional thresholds were typically applied to a three-dimensional data source.
+In this analysis, my first instinct was to improve on the traditional style of visualising the inclinometer data. Typically, static, two-dimensional plots were used to this end (see below).
 
-## Applying Uncertainty Quantification in Bayesian Framework
+![Old 2D Plot](/posts/Inclo/traditional_inclo.png)
+
+However, using Plotly, I developed interactive plots which provided a more intuitive understanding of the data, and uncovered flaws in traditional analysis methods, where 2-dimensional thresholds were typically applied to a three-dimensional data source.
+
+![New 2D Plot](/posts/Inclo/IMG_0471.jpg)
+
+![New 3D Plot](/posts/Inclo/IMG_0472.jpg)
+
+### Applying Uncertainty Quantification in Bayesian Framework
 
 The urgency for efficient SHM is escalating due to aging civil infrastructure, exacerbated by climate change and population growth. Traditional SHM methods are prone to human error and incur high maintenance costs. My study introduces a statistical and probabilistic approach using Uncertainty Quantification (UQ) within a Bayesian framework, automating inclinometer data interpretation and conserving resources.
 
-## Utilizing Kalman Filtering and RTS Smoother
+### Utilizing Kalman Filtering and RTS Smoother
 
-A key part of this study is employing Kalman Filtering to model inclinometer data as a Hidden Markov Model. This method, combined with an RTS smoother, adeptly manages real-world data challenges such as irregular time intervals and outliers. The practical effectiveness of this approach is validated through extensive real-world data sets.
+A key part of this study is employing Kalman Filtering to model inclinometer data as a Hidden Markov Model. This method, combined with an RTS smoother, adeptly manages real-world data challenges such as irregular time intervals and outliers. The practical effectiveness of this approach is validated through extensive real-world data sets, demonstrating its superiority in inclinometer data processing and SHM.
 
-## Conclusion
+### Conclusion
 
 This paper provides a novel approach to inclinometer data analysis, offering a more efficient, accurate, and automated method for infrastructure monitoring, crucial for timely maintenance and risk management.
 
 **Paper:** https://arxiv.org/abs/2307.00305
     `,
-    thumbnail: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=400&fit=crop",
-    tags: ["Bayesian", "Time Series", "Infrastructure", "Research"]
-  },
-  {
-    id: "leptoquark-search-third-generation",
-    title: "Search for Leptoquarks Decaying into Third-Generation Quarks",
-    date: "Jun 2023",
-    excerpt: "Extending leptoquark searches to third-generation quarks using ATLAS detector data from the Large Hadron Collider.",
-    content: `
+        thumbnail:
+            "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=400&fit=crop",
+        tags: ["Bayesian", "Time Series", "Infrastructure", "Research"],
+    },
+    {
+        id: "leptoquark-search-third-generation",
+        title: "Search for Leptoquarks Decaying into Third-Generation Quarks",
+        date: "Jun 2023",
+        excerpt:
+            "Extending leptoquark searches to third-generation quarks using ATLAS detector data from the Large Hadron Collider.",
+        content: `
 # Search for Pair-Produced Scalar and Vector Leptoquarks Decaying into Third-Generation Quarks
 
-This paper follows on from my previous work on Leptoquark searches with the ATLAS detector.
+This paper follows on from my [previous post](/articles/leptoquark-search-mixed-generation) on Leptoquark searches with the ATLAS detector. For an introduction to the topic, feel free to refer back to that post.
 
 ## Why Leptoquarks Matter
 
@@ -448,15 +513,17 @@ This paper is a significant contribution to particle physics, as it advances the
 
 **Paper:** https://link.springer.com/article/10.1007/JHEP06(2023)188
     `,
-    thumbnail: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=400&fit=crop",
-    tags: ["Particle Physics", "ATLAS", "LHC", "Research"]
-  },
-  {
-    id: "robotic-bridge-inspection",
-    title: "Robotic Inspection Project: Computer Vision for Bridge Cable Analysis",
-    date: "Sep 2022",
-    excerpt: "Developing software for robotic bridge inspection using computer vision to analyze cable defects on stay-cable bridges.",
-    content: `
+        thumbnail:
+            "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=400&fit=crop",
+        tags: ["Particle Physics", "ATLAS", "LHC", "Research"],
+    },
+    {
+        id: "robotic-bridge-inspection",
+        title: "Robotic Inspection Project: Computer Vision for Bridge Cable Analysis",
+        date: "Sep 2022",
+        excerpt:
+            "Developing software for robotic bridge inspection using computer vision to analyze cable defects on stay-cable bridges.",
+        content: `
 # Robotic Inspection Project
 
 This project represents a significant advancement in bridge inspection, utilizing robotics and computer vision to analyze cable defects on stay-cable bridges. Initially, the challenge was to make the images captured by an inspection robot both useful and usable.
@@ -472,13 +539,19 @@ My focus in this project was the software development. I successfully implemente
 1. **Distortion Correction:** Before stitching, the images were corrected for any distortions
 2. **Automated Stitching:** The software stitched image tiles around and along the cable
 3. **Defect Detection:** Computer vision was employed to automatically detect cable defects
-4. **Interactive User Interface:** A user interface was developed using React, running locally via Electron. This interface interacted with a backend Python server for image analysis
+4. **Interactive User Interface:** A user interface was developed using React, running locally via Electron. This interface interacted with a backend Python server for image analysis, allowing users to view large composite images, identify detected defects, and add manual annotations
 5. **High-Resolution Imaging:** The interface was capable of displaying very large images at deep zoom levels
 6. **PDF Report Generation:** The system could automatically generate PDF reports from the images and annotations
 
 ## Computer Vision for Defect Detection
 
-A core component of this project was the utilization of modern computer vision techniques to detect and localize defects on the cable surface. This utility makes it possible for on-site engineers to quickly assess large quantities of image data, with their attention being effectively focused on sites with the most probable signs of damage.
+A core component of this project was the utilization of modern computer vision techniques to detect and localize defects on the cable surface. This utility of the product makes it possible for on-site engineers to quickly assess large quantities of image data, with their attention being effectively focused on sites with the most probable signs of damage.
+
+![Object detection and localisation](/posts/automateddetection.png)
+
+An early prototype of the cable viewer front end can be seen below. This displayed test images from a cable, facilitating user annotations. It's worth noting that this prototype used placeholder data from the Anzac Bridge for demonstration.
+
+![Annotations provided in the frontend](/posts/annotations.png)
 
 ## Development Approach
 
@@ -488,15 +561,17 @@ The project's success hinged on adopting an agile approach, which enabled contin
 
 This project was a blend of research (for automated defect detection) and solid software engineering. Close engagement with the client ensured the final product was tailored to their requirements, successfully transforming a series of proofs-of-concept into a cohesive, functional product.
     `,
-    thumbnail: "https://images.unsplash.com/photo-1545193544-312983719627?w=800&h=400&fit=crop",
-    tags: ["Computer Vision", "React", "Python", "Infrastructure"]
-  },
-  {
-    id: "leptoquark-search-mixed-generation",
-    title: "Search for Mixed Generation Leptoquarks with ATLAS",
-    date: "Nov 2020",
-    excerpt: "Investigating the potential existence of leptoquarks - theoretical particles bridging quarks and leptons - using LHC data.",
-    content: `
+        thumbnail:
+            "https://images.unsplash.com/photo-1545193544-312983719627?w=800&h=400&fit=crop",
+        tags: ["Computer Vision", "React", "Python", "Infrastructure"],
+    },
+    {
+        id: "leptoquark-search-mixed-generation",
+        title: "Search for Mixed Generation Leptoquarks with ATLAS",
+        date: "Nov 2020",
+        excerpt:
+            "Investigating the potential existence of leptoquarks - theoretical particles bridging quarks and leptons - using LHC data.",
+        content: `
 # Search for Pairs of Scalar Leptoquarks Decaying into Quarks and Electrons or Muons
 
 This paper investigates the potential existence of leptoquarks (LQs). These are theoretical new particles that could bridge the gap between quarks and leptons, and are predicted by certain extensions of the Standard Model of particle physics.
@@ -522,18 +597,20 @@ The investigation contributes to the broader quest of understanding new physics 
 
 **Paper:** https://link.springer.com/article/10.1007/JHEP10(2020)112
     `,
-    thumbnail: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&h=400&fit=crop",
-    tags: ["Particle Physics", "ATLAS", "LHC", "Research"]
-  },
-  {
-    id: "montecarlo-top-physics",
-    title: "Monte Carlo Simulation in Top Physics",
-    date: "Nov 2019",
-    excerpt: "Testing and validating the Matchbox framework in Herwig 7 for producing merged multi-leg top-antitop Monte Carlo samples at NLO accuracy.",
-    content: `
+        thumbnail:
+            "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&h=400&fit=crop",
+        tags: ["Particle Physics", "ATLAS", "LHC", "Research"],
+    },
+    {
+        id: "montecarlo-top-physics",
+        title: "Monte Carlo Simulation in Top Physics",
+        date: "Nov 2019",
+        excerpt:
+            "Testing and validating the Matchbox framework in Herwig 7 for producing merged multi-leg top-antitop Monte Carlo samples at NLO accuracy.",
+        content: `
 # Implementation of Merged Multi-leg tt̄ Samples at NLO Accuracy Using Matchbox Framework in Herwig 7
 
-This paper focuses on testing and validating the use of the Matchbox framework in Herwig 7 for producing merged, multi-leg top-antitop (tt̄) Monte Carlo samples at next-to-leading order (NLO) accuracy.
+This paper focuses on testing and validating the use of the Matchbox framework in [Herwig 7](https://herwig.hepforge.org/tutorials/index.html) for producing merged, multi-leg top-antitop (tt̄) Monte Carlo samples at next-to-leading order (NLO) accuracy.
 
 ## Purpose
 
@@ -555,21 +632,22 @@ This report contributes to the ongoing efforts to enhance the precision of parti
 
 **Paper:** https://cds.cern.ch/record/2692863
     `,
-    thumbnail: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=800&h=400&fit=crop",
-    tags: ["Particle Physics", "Monte Carlo", "ATLAS", "Simulation"]
-  }
+        thumbnail:
+            "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=800&h=400&fit=crop",
+        tags: ["Particle Physics", "Monte Carlo", "ATLAS", "Simulation"],
+    },
 ];
 
 export const getArticleById = (id: string): Article | undefined => {
-  return articles.find(article => article.id === id);
+    return articles.find((article) => article.id === id);
 };
 
 export const searchArticles = (query: string): Article[] => {
-  const lowerQuery = query.toLowerCase();
-  return articles.filter(
-    article =>
-      article.title.toLowerCase().includes(lowerQuery) ||
-      article.excerpt.toLowerCase().includes(lowerQuery) ||
-      article.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
-  );
+    const lowerQuery = query.toLowerCase();
+    return articles.filter(
+        (article) =>
+            article.title.toLowerCase().includes(lowerQuery) ||
+            article.excerpt.toLowerCase().includes(lowerQuery) ||
+            article.tags.some((tag) => tag.toLowerCase().includes(lowerQuery)),
+    );
 };
